@@ -1,5 +1,19 @@
 # @eballoi/react-use-polling
 
+## 1.1.0
+
+### Minor Changes
+
+In this changeset, we've been very productive:
+
+- We introduced tests to our codebase. Yes, tests! It's like our code is finally getting its regular checkup at the doctor's office. We're keeping those pesky bugs at bay.
+
+- We also gave our README file a makeover. It was feeling a bit underdressed, so we added some spiffy new documentation to make it look good at parties.
+
+- Our package.json got a little love too. We updated it with some minor fixes, just to keep things running smoothly.
+
+Our codebase is happier and healthier now. 🚀
+
 ## 1.0.0
 
 ### Major Changes

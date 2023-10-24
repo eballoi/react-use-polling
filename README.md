@@ -93,4 +93,4 @@ We welcome contributions via pull requests. Fork the repository and create a pul
 
 ## Changelog
 
-See the [CHANGELOG](https://chat.openai.com/c/CHANGELOG.md) for information about the latest updates and changes to the package.
+See the [CHANGELOG](https://github.com/eballoi/react-use-polling/blob/4f21f44580a819b8eac280ae9a5d0c5f7665248e/CHANGELOG.md) for information about the latest updates and changes to the package.

@@ -1,6 +1,6 @@
 {
   "name": "@eballoi/react-use-polling",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "☕ A hassle-free react hook for periodic data polling 🔄 with error management",
   "keywords": [
     "react",
@@ -17,10 +17,19 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "test": "jest"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@types/jest": "^29.5.6",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
@@ -30,12 +39,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ebrunaway/react-use-polling.git"
+    "url": "git+https://github.com/eballoi/react-use-polling.git"
   },
   "author": "eballoi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ebrunaway/react-use-polling/issues"
+    "url": "https://github.com/eballoi/react-use-polling/issues"
   },
-  "homepage": "https://github.com/ebrunaway/react-use-polling#readme"
+  "homepage": "https://github.com/eballoi/react-use-polling#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
