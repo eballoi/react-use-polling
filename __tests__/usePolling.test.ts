@@ -3,6 +3,7 @@
  */
 import { renderHook} from '@testing-library/react-hooks';
 import usePolling from '../index';
+import { useEffect } from 'react';
 
 
 describe('usePolling', () => {
@@ -44,4 +45,29 @@ describe('usePolling', () => {
         // Ensure the error callback was executed
         expect(errorCallback).toHaveBeenCalledWith(new Error('Test Error'));
     });
+
+    it('should cancel the polling', async () => {
+        jest.useFakeTimers();
+
+        const { result, waitForNextUpdate } = renderHook(() => {
+            let i = 0;
+            const sum = async () => i++;
+
+            const { data, cancel } = usePolling<number>(sum, { interval: 1000 });
+
+            useEffect(() => {
+                if(data && data >= 3) {
+                    cancel();
+                }
+            }, [data]);
+
+            return data;
+        });
+
+        await waitForNextUpdate();
+        await jest.advanceTimersByTimeAsync(10000);
+
+        expect(result.current).toBe(3);
+    });
+
 });
